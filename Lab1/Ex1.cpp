@@ -6,15 +6,10 @@ using namespace std;
 
 int main() {
 
-	Account myAccount;
+	Account account1{ "Jane Green" };
+	Account account2{ "Kevin Curiel" };
 
-	cout << "Initial account name is: " << myAccount.getName();
-
-	cout << "\nPlease enter the account name: ";
-	string theName;
-	getline(cin, theName);
-	myAccount.setName(theName);
-
-	cout << "Name in object myAccount is: ";
+	cout << "Account 1 name is: " << account1.getName() << endl;
+	cout << "Account 2 name is: " << account2.getName() << endl;
 
 }
