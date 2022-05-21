@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{461b63a4-5400-489b-90eb-f46359b77208}</ProjectGuid>
-    <RootNamespace>Lab2Ex14</RootNamespace>
+    <ProjectGuid>{e830bb2c-ad26-40fd-857b-d51defd236ac}</ProjectGuid>
+    <RootNamespace>Lab2Ex15</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,10 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ex14.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="maximum.h" />
+    <ClCompile Include="Ex15.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
