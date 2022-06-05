@@ -4,9 +4,9 @@
 #include "BasePlusCommissionEmployee.h"
 using namespace std;
 
-BasePlusCommissionEmployee::BasePlusCommissionEmployee(
-	const string& first, const string& last, const string& ssn, double sales, double rate, double salary)
-	: CommissionEmployee(first, last, ssn, sales, rate)
+
+BasePlusCommissionEmployee::BasePlusCommissionEmployee(const string& first, const string& last, const string& ssn, 
+	double sales, double rate, double salary) : CommissionEmployee(first, last, ssn, sales, rate)
 {
 	setBaseSalary(salary);
 }
@@ -26,17 +26,14 @@ double BasePlusCommissionEmployee::getBaseSalary() const
 
 double BasePlusCommissionEmployee::earnings() const
 {
-	return getBaseSalary() + (getGrossSales() * getCommissionRate());
+	return getBaseSalary() + CommissionEmployee::earnings();
 }
 
 string BasePlusCommissionEmployee::toString() const
 {
 	ostringstream output;
 	output << fixed << setprecision(2);
-	output << "Employee: " << getFirstName() << " " << getLastName()
-		<< "\nSocial Security Num: " << getSocialSecurityNumber()
-		<< "\nGross Sales: $" << getGrossSales()
-		<< "\nCommission Rate: " << getCommissionRate() * 100 << "%"
-		<< "\nBase Salary: $" << getBaseSalary() << endl << endl;
+	output << "Employee: " << CommissionEmployee::toString()
+		<< "\nBase Salary: $" << getBaseSalary();
 	return output.str();
 }

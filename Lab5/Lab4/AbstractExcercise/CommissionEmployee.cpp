@@ -4,43 +4,12 @@
 #include "CommissionEmployee.h"
 using namespace std;
 
-CommissionEmployee::CommissionEmployee(const string& first, const string& last, const string& ssn, double sales, double rate)
+CommissionEmployee::CommissionEmployee(const string& first,
+	const string& last, const string& ssn, double sales, double rate)
+	: Employee(first, last, ssn)
 {
-	firstName = first;
-	lastName = last;
-	socialSecurityNumber = ssn;
-	grossSales = sales;
-	commissionRate = rate;
-}
-
-void CommissionEmployee::setFirstName(const string& first)
-{
-	firstName = first;
-}
-
-string CommissionEmployee::getFirstName() const
-{
-	return firstName;
-}
-
-void CommissionEmployee::setLastName(const string& last)
-{
-	lastName = last;
-}
-
-string CommissionEmployee::getLastName() const
-{
-	return lastName;
-}
-
-void CommissionEmployee::setSocialSecurityNumber(const string& ssn)
-{
-	socialSecurityNumber = ssn;
-}
-
-string CommissionEmployee::getSocialSecurityNumber() const
-{
-	return socialSecurityNumber;
+	setGrossSales(sales);
+	setCommissionRate(rate);
 }
 
 void CommissionEmployee::setGrossSales(double sales)
@@ -80,8 +49,7 @@ string CommissionEmployee::toString() const
 {
 	ostringstream output;
 	output << fixed << setprecision(2);
-	output << "Employee: " << getFirstName() << " " << getLastName()
-		<< "\nSocial Security Num: " << getSocialSecurityNumber()
+	output << "Employee: " << Employee::toString()
 		<< "\nGross Sales: $" << getGrossSales()
 		<< "\nCommission Rate: " << getCommissionRate() * 100 << "%";
 	return output.str();
