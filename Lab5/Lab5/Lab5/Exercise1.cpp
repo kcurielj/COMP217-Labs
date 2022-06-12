@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 using namespace std;
-
+/*
 int main() {
 
 	ofstream outputFile;
@@ -22,3 +22,4 @@ int main() {
 
 	return 0;
 }
+*/
